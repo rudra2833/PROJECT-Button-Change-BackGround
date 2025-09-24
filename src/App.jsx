@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { useState,useEffect} from 'react'
 
 function App() {
   const [color, changeColor] = useState("black");
 
   const colorCode = ["red", "orange", "yellow", "green", "blue", "purple", "brown"];
+
+    useEffect(()=>{
+      return console.log("Change to new server!!")
+    },[color])
 
   function handleClick(e){
     changeColor(e.target.id)
